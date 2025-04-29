@@ -1,4 +1,4 @@
-package models;
+package ir.models;
 
 public class UserTest {
 }

@@ -1,4 +1,4 @@
-package logic;
+package ir.logic;
 
 public class DepositTest {
 }
