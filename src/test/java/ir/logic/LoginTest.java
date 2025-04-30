@@ -5,10 +5,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LoginTest {
     @Test
-    public void testLogin(){
+    public void ifUserLogsInSuccessfully(){
         Login logIn = new Login();
-        String message = logIn.enter("user1","1234");
-        assertEquals("You have logged in successfully",message);
+        assertDoesNotThrow(()-> logIn.enter("user1", "1234"));
+    }
+
+    @Test
+    public void ifUserFailsToLogIn() {
+        Login logIn = new Login();
+        assertThrows(CustomLoginException.class, () -> logIn.enter("wrongUserName","wrongPassWord"));
     }
 
 }

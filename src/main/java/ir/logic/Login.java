@@ -2,7 +2,10 @@ package ir.logic;
 
 public class Login {
 
-    public String enter(String userName, String password) {
-        return "You have logged in successfully";
+    public void enter(String userName, String password) throws CustomLoginException {
+        if (userName.equals("user1") && password.equals("1234")){
+            return;
+        }
+        else throw new CustomLoginException();
     }
 }
